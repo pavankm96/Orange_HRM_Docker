@@ -31,7 +31,7 @@ def send_email(sender_email, sender_password, receiver_emails, subject, message,
         msg.attach(part)
 
     # Connect to the SMTP server
-    server = smtplib.SMTP('smtp-relay.brevo.com', 587)
+    server = smtplib.SMTP('your.mail.smtp', 587)
     server.starttls()
     server.login(sender_email, sender_password)
 
@@ -91,9 +91,9 @@ def test_orange_login():
         pim_report.to_csv('pim_report.csv',index=False) 
 
         # Example usage
-        sender_email = 'pavankm96@gmail.com'
-        sender_password = '7mD3ETbFzIK8QWkB'
-        receiver_emails = ['pavankm96@gmail.com','bhargav.kn@gmail.com']
+        sender_email = 'xyz@adb.com'
+        sender_password = 'type-password'
+        receiver_emails = ['xyz@adb.com','xyz@adb.com']
         subject = 'Test HR Reports'
         message = 'This is a HR Report PFA report.'
         attachment_paths = ['admin_report.csv','pim_report.csv']
